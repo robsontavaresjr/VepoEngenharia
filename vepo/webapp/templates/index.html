@@ -1,0 +1,80 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'normalize.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'grid.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <title>Painéis Solares.</title>
+
+</head>
+
+<body>
+  <!-- Header begin  -->
+    <header>
+
+      <!-- Navbar begin  -->
+      <navbar class="menu">
+        <div class="container-box">
+          <div class="brand">
+            <div class="brand-logo"></div>
+            <div class="brand-name">VEPO Engenharia.</div>
+          </div>
+          <ul class="main-menu">
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Cotação</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </navbar>
+
+      <!-- Main Section begin  -->
+      <div class="main-hero-box">
+        <h1 class="tagline">Fazemos Você Gastar Menos<br>Sendo o Mais Sustentável Possível.</h1>
+        <a href="#" class="btn-veja-como"> Veja Como</a>
+      </div>
+
+    </header>
+
+    <!-- Quote and Infos begin  -->
+    <section class="section-info">
+
+      <div class="container">
+        <h2 class="frase-info">Saiba o que podemos fazer por você !</h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col span-1-of-2 box">
+          <div class="img-cot"></div>
+        </div>
+
+        <div class="col span-1-of-2 box">
+          <h3>Cotação</h3>
+            <div class="container form-quote">
+
+              <form method="POST" class="myForm">
+
+              {% csrf_token  %}
+              {{ form.as_p }}
+
+
+              <input type="submit" class="btn" value="Cotar !">
+            </form>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+</body>
+</html>
