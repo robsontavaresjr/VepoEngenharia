@@ -19,7 +19,7 @@ docutils==0.14
 idna==2.6
 jmespath==0.9.3
 jsonschema==2.6.0
-numpy==1.15.1
+numpy==1.22.0
 pandas==0.23.4
 pathspec==0.5.5
 python-dateutil==2.7.3
